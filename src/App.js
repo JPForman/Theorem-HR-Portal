@@ -120,7 +120,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/feedback" render={()=><FeedbackSubmit onFeedbackSubmission={this.handleAddingNewFeedback}/>}/>
           <Route exact path="/employeehome" render={()=><EmployeeHome selectedEmployee={this.state.selectedEmployee}/>}/>
-          <Route exact path="/login" render={()=><LoginPage
+          <Route exact path="/" render={()=><LoginPage
           selectedEmployee={this.state.selectedEmployee}login={this.state.login} onHandleLogin={this.handleLogin}/>}/>
           <Route exact path="/adminview" render={() => <AdminView masterEmployeeFeedbackList={this.state.employeeFeedback} onHandleDelete={this.onHandleDelete} />} />
 
