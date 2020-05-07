@@ -17,12 +17,22 @@
     "reactstrap": "^8.4.1"
   },
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack",
-    "test": "react-scripts test",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "scss": "node-sass --watch src/scss/style.scss src/css/style.css"
-  },
+    "heroku-postbuild": "npm run build"
+    }
+
+  // "scripts": {
+  //   "start": "node index.js",
+  //   "build": "webpack",
+  //   "test": "react-scripts test",
+  //   "eject": "react-scripts eject",
+  //   "scss": "node-sass --watch src/scss/style.scss src/css/style.css"
+  // },
+
   "eslintConfig": {
     "extends": "react-app"
   },
